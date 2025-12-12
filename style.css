@@ -1,0 +1,330 @@
+/* ===== GLOBAL ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: #252732f9;
+    color: #fff;
+}
+
+img {
+    width: 100%;
+    object-fit: cover;
+}
+
+/* ===== HEADER ===== */
+header {
+    width: 100%;
+    padding: 20px 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: transparent;
+}
+
+.logo {
+    font-size: 28px;
+    font-weight: 600;
+}
+
+.nav {
+    display: flex;
+    gap: 35px;
+}
+
+.nav a {
+    text-decoration: none;
+    color: #ddd;
+    font-weight: 400;
+    transition: 0.3s;
+}
+
+.nav a:hover {
+    color: #fff;
+}
+
+.icons i {
+    font-size: 22px;
+    margin-left: 18px;
+    cursor: pointer;
+}
+
+/* ===== HERO SECTION ===== */
+.hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 80px 70px;
+    flex-wrap: wrap;
+}
+
+.hero-text {
+    max-width: 480px;
+}
+
+.hero-text .hello {
+    font-size: 32px;
+    opacity: 0.8;
+}
+
+.hero-text .name {
+    font-size: 60px;
+    font-weight: 700;
+}
+
+.desc {
+    margin: 15px 0 30px;
+    line-height: 1.6;
+    color: #ccc;
+}
+
+.social img {
+    width: 45px;
+    height: 45px;
+    margin-right: 12px;
+    background: #333;
+    padding: 8px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.social img:hover {
+    transform: scale(1.1);
+}
+
+/* HERO IMAGE */
+.hero-img img {
+    width: 330px;
+    border-radius: 20px;
+    margin-top: 20px;
+}
+
+/* ===== SERVICES ===== */
+.services {
+    padding: 50px 70px;
+}
+
+.services h2 {
+    font-size: 32px;
+    margin-bottom: 35px;
+    font-weight: 600;
+}
+
+.service-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.service-box {
+    padding: 25px;
+    background: #25262c;
+    border-radius: 15px;
+    transition: 0.3s;
+}
+
+.service-box:hover {
+    transform: translateY(-5px);
+}
+
+.service-box h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.service-box p {
+    margin-bottom: 15px;
+    color: #bfbfbf;
+}
+
+.service-box a {
+    font-size: 26px;
+    color: #ccb372;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* ========================================================= */
+/* =============== RESPONSIVE MEDIA QUERIES ================= */
+/* ========================================================= */
+
+/* Tablets (max-width: 992px) */
+@media (max-width: 992px) {
+    header {
+        padding: 20px 40px;
+    }
+
+    .nav {
+        display: none; /* mobile menu ke liye */
+    }
+
+    .hero {
+        padding: 60px 40px;
+    }
+
+    .hero-text .name {
+        font-size: 48px;
+    }
+
+    .service-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Mobile (max-width: 768px) */
+@media (max-width: 768px) {
+
+    header {
+        padding: 20px 25px;
+    }
+
+    .hero {
+        flex-direction: column;
+        text-align: center;
+        padding: 50px 25px;
+    }
+
+    .hero-text {
+        max-width: 100%;
+    }
+
+    .hero-text .name {
+        font-size: 42px;
+    }
+
+    .social img {
+        width: 40px;
+        height: 40px;
+    }
+
+    .hero-img img {
+        width: 260px;
+        margin-top: 25px;
+    }
+
+    .service-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .services {
+        padding: 40px 25px;
+    }
+}
+
+/* Small Phones (max-width: 480px) */
+@media (max-width: 480px) {
+
+    header .logo {
+        font-size: 22px;
+    }
+
+    .icons i {
+        font-size: 20px;
+    }
+
+    .hero-text .name {
+        font-size: 36px;
+    }
+}
+:root{
+  --bg:#0f1720;       /* dark background */
+  --panel:#0b1220;    /* slightly different dark */
+  --muted:#9aa6b2;
+  --accent:#1f6feb;   /* blue for name */
+  --white:#ffffff;
+  --gap:14px;
+  font-family: "Noto Sans", "Segoe UI", Tahoma, sans-serif;
+}
+
+*{box-sizing:border-box}
+body{
+  margin:0;
+  background: #575151;
+  color:var(--muted);
+  line-height:1.4;
+}
+
+/* Footer */
+.site-footer{
+  background: linear-gradient(180deg,var(--bg),var(--panel));
+  color:var(--muted);
+  padding:22px 18px;
+  text-align:center;
+}
+
+.footer-inner{
+  display:flex;
+  gap:var(--gap);
+  align-items:center;
+  justify-content:center;
+  flex-wrap:wrap;
+  padding:8px 6px;
+}
+
+/* Social icons */
+.social{
+  display:flex;
+  gap:10px;
+  align-items:center;
+}
+.icon-link{
+  width:36px;
+  height:36px;
+  display:inline-grid;
+  place-items:center;
+  border-radius:8px;
+  background:transparent;
+  transition:transform .18s ease, background .18s ease;
+  text-decoration:none;
+}
+.icon-link svg{
+  width:20px;
+  height:20px;
+  fill:var(--muted);
+  display:block;
+}
+.icon-link:hover{
+  transform:translateY(-4px);
+  background:rgba(255,255,255,0.03);
+}
+.icon-link:focus svg,
+.icon-link:active svg{
+  fill:var(--accent);
+}
+
+/* Brand */
+.brand{
+  text-align:center;
+  margin-left:6px;
+}
+.brand-name{
+  color:var(--accent);
+  font-weight:700;
+  font-size:1.15rem;
+}
+.brand-sub{
+  color:var(--muted);
+  font-size:0.9rem;
+  margin-top:2px;
+}
+
+/* Copyright */
+.copyright{
+  margin-top:12px;
+  color:var(--muted);
+  font-size:0.88rem;
+}
+
+/* Responsive: on large screens show content inline */
+@media(min-width:720px){
+  .footer-inner{
+    justify-content:center;
+  }
+  .brand{ margin-left:18px; text-align:left; }
+  .site-footer{ text-align:center }
+}
